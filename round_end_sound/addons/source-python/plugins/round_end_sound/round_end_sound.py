@@ -9,23 +9,7 @@ def load():
     
 def setDL():
 	dl = Downloadables()
-	dl.add("sound/round_end_sound/deluxe16.mp3")
-	dl.add("sound/round_end_sound/deluxe18.mp3")
-	dl.add("sound/round_end_sound/deluxe20.mp3")
-	dl.add("sound/round_end_sound/deluxe31.mp3")
-	dl.add("sound/round_end_sound/deluxe43.mp3")
-	dl.add("sound/round_end_sound/res_ctwin4.mp3")
-	dl.add("sound/round_end_sound/res_twin1.mp3")
-	dl.add("sound/round_end_sound/res_twin7.mp3")
-	dl.add("sound/round_end_sound/rumble_intro.mp3")
-	dl.add("sound/round_end_sound/shesafreak.mp3")
-	dl.add("sound/round_end_sound/ufk3.mp3")
-	dl.add("sound/round_end_sound/ufk4.mp3")
-	dl.add("sound/round_end_sound/ufk5.mp3")
-	dl.add("sound/round_end_sound/ufk6.mp3")
-	dl.add("sound/round_end_sound/ufk7.mp3")
-	dl.add("sound/round_end_sound/ufk8.mp3")
-	dl.add("sound/round_end_sound/ufk13.mp3")
+	dl.add_directory('sound/round_end_sound')
 		    
 @Event('round_end')
 def round_end(args):
