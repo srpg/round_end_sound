@@ -1,24 +1,15 @@
-# ========================================
-# IMPORTS
-# ========================================
 from filters.players import PlayerIter
-from engines.server import engine_server
-from players.helpers import edict_from_userid
-
+from players.entity import Player
+from engines.sound import Sound
 # ========================================
 # SOUND PLAY
 # ========================================
 
 def playgamesound(userid, _sound):
-	client_command(userid, 'play %s' % _sound)
-
-# ========================================
-# USERID GETTERS
-# ========================================
-
+	player = Player.from_userid(userid)
+	Play_sound = Sound('%s' % (_sound))
+	Play_sound.play(player.index)
+	
 def getUseridList():
 	for i in PlayerIter.iterator():
 		yield i.userid
-
-def client_command(userid, __cmd__):
-	engine_server.client_command(edict_from_userid(userid), __cmd__)
